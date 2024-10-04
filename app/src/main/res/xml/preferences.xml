@@ -1,0 +1,26 @@
+<!-- res/xml/preferences.xml -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Units">
+
+        <ListPreference
+            android:key="units_preference"
+            android:title="Units"
+            android:entries="@array/units_entries"
+            android:entryValues="@array/units_values"
+            android:defaultValue="metric" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notifications">
+
+        <SwitchPreferenceCompat
+            android:key="notifications_preference"
+            android:title="Enable Notifications"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <!-- Additional preferences -->
+
+</PreferenceScreen>

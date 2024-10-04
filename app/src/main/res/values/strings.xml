@@ -1,4 +1,100 @@
+<!-- res/values/strings.xml -->
 <resources>
-    <string name="app_name">Weather Wise</string>
-    <string name="google_maps_key">YOUR_GOOGLE_MAPS_API_KEY</string>
+    <!-- App Name -->
+    <string name="app_name">WeatherWise</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_loading">Loading...</string>
+
+    <!-- Main Activity -->
+    <string name="current_location">Current Location</string>
+    <string name="temperature_unit_celsius">°C</string>
+    <string name="temperature_unit_fahrenheit">°F</string>
+    <string name="feels_like">Feels like %1$s</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="uv_index">UV Index</string>
+    <string name="air_quality_index">Air Quality Index</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+    <string name="daily_forecast">Weekly Forecast</string>
+
+    <!-- Forecast Activity -->
+    <string name="hourly_forecast_title">Hourly Forecast</string>
+    <string name="daily_forecast_title">Weekly Forecast</string>
+
+    <!-- Radar Map Activity -->
+    <string name="radar_map_title">Radar Map</string>
+    <string name="select_layer">Select Weather Layer</string>
+
+    <!-- Alerts Activity -->
+    <string name="alerts_title">Weather Alerts</string>
+    <string name="no_alerts">No active alerts.</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">Settings</string>
+    <string name="units">Units</string>
+    <string name="unit_metric">Metric (°C, m/s)</string>
+    <string name="unit_imperial">Imperial (°F, mph)</string>
+    <string name="notifications">Notifications</string>
+    <string name="enable_alerts">Enable Severe Weather Alerts</string>
+    <string name="theme">Theme</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System Default</string>
+
+    <!-- Permissions -->
+    <string name="location_permission_rationale">WeatherWise needs access to your location to provide accurate weather information.</string>
+    <string name="grant_permission">Grant Permission</string>
+
+    <!-- Error Messages -->
+    <string name="error_fetching_data">Error fetching data. Please try again later.</string>
+    <string name="no_internet_connection">No internet connection.</string>
+    <string name="location_unavailable">Unable to determine your location.</string>
+
+    <!-- General -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+
+    <!-- Onboarding Screen (if applicable) -->
+    <string name="onboarding_welcome">Welcome to WeatherWise!</string>
+    <string name="onboarding_description">Stay informed with accurate weather forecasts and alerts.</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- Content Descriptions -->
+    <string name="content_description_weather_icon">Weather condition icon</string>
+    <string name="content_description_app_logo">WeatherWise Logo</string>
+
+    <!-- Units -->
+    <string name="speed_unit_mps">m/s</string>
+    <string name="speed_unit_mph">mph</string>
+
+    <!-- Months and Days (for formatting dates) -->
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="days_of_week">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
 </resources>

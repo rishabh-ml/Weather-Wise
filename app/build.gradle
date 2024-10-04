@@ -1,5 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
+    id 'com.google.gms.google-services'
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localProperties.load(new FileInputStream(localPropertiesFile))
 }
 
 android {
@@ -12,8 +19,14 @@ android {
         targetSdk 34
         versionCode 1
         versionName "1.0"
+        buildConfigField "String", "OPENWEATHER_API_KEY", "\"${localProperties.getProperty('OPENWEATHER_API_KEY', '')}\""
+        buildConfigField "String", "GOOGLE_MAPS_API_KEY", "\"${localProperties.getProperty('GOOGLE_MAPS_API_KEY', '')}\""
+
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        buildConfig true
     }
 
     buildTypes {
@@ -41,4 +54,9 @@ dependencies {
     implementation libs.converter.gson
     implementation libs.gson
     implementation libs.play.services.maps
+    implementation platform('com.google.firebase:firebase-bom:33.4.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+    apply plugin: 'com.google.gms.google-services'
+
 }

@@ -1,4 +1,13 @@
-
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
-    <solid android:color="@color/colorPrimary" />
-</shape>
+<!-- res/drawable/splash_screen.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item>
+        <color android:color="@color/colorPrimary" />
+    </item>
+    <!-- Centered logo -->
+    <item>
+        <bitmap
+            android:src="@drawable/ic_app_logo"
+            android:gravity="center" />
+    </item>
+</layer-list>

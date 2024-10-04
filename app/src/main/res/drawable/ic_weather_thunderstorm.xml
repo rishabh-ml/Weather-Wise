@@ -1,0 +1,15 @@
+<!-- res/drawable/ic_weather_thunderstorm.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Cloud Path -->
+    <path
+        android:fillColor="#90A4AE"
+        android:pathData="M19 17.5H6.5C4.57 17.5 3 15.93 3 14s1.57-3.5 3.5-3.5c0.66 0 1.28 0.19 1.82 0.52 0.88-2.16 3-3.52 5.18-3.02 2.08 0.48 3.5 2.3 3.5 4.48v0.02C17.98 12.5 19 13.52 19 14.75s-1.02 2.75-2.75 2.75z"/>
+    <!-- Lightning Bolt Path -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M11 14h-1l0.5-2H9l-1 4h2l-0.5 2H13l-2-4z"/>
+</vector>

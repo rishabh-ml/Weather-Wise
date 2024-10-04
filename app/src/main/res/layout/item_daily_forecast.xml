@@ -1,0 +1,64 @@
+<!-- res/layout/item_daily_forecast.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Collapsed View -->
+    <LinearLayout
+        android:id="@+id/linearLayout_collapsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textView_day"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText" />
+
+        <ImageView
+            android:id="@+id/imageView_daily_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_cloudy"
+            android:contentDescription="@string/weather_icon_desc" />
+
+        <TextView
+            android:id="@+id/textView_daily_high_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25° / 15°"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <!-- Expanded View -->
+    <LinearLayout
+        android:id="@+id/linearLayout_expanded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/textView_daily_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detailed forecast information..."
+            android:textSize="14sp"
+            android:textColor="@color/colorSecondaryText" />
+
+    </LinearLayout>
+
+</LinearLayout>

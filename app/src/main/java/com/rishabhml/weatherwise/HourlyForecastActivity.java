@@ -1,24 +1,47 @@
 package com.rishabhml.weatherwise;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.rishabhml.weatherwise.Adapters.HourlyForecastAdapter;
+import com.rishabhml.weatherwise.models.HourlyForecast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HourlyForecastActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerViewHourly;
+    private HourlyForecastAdapter adapter;
+    private List<HourlyForecast> hourlyForecastList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_hourly_forecast);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        // Initialize RecyclerView
+        recyclerViewHourly = findViewById(R.id.recyclerViewHourly);
+        recyclerViewHourly.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        // Initialize data
+        hourlyForecastList = new ArrayList<>();
+        // Populate hourlyForecastList with data
+        // For example:
+        // hourlyForecastList.add(new HourlyForecast("1 PM", "25°C", R.drawable.ic_weather_sunny));
+
+        // Initialize adapter
+        adapter = new HourlyForecastAdapter(hourlyForecastList);
+        recyclerViewHourly.setAdapter(adapter);
+
+        // Fetch and display hourly forecast data
+        fetchHourlyForecast();
+    }
+
+    private void fetchHourlyForecast() {
+        // Implement API call to fetch hourly forecast data
+        // Update hourlyForecastList and notify adapter
     }
 }

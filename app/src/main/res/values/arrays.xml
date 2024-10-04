@@ -1,0 +1,15 @@
+<!-- res/values/arrays.xml -->
+<resources>
+    <!-- Units Array for Settings -->
+    <string-array name="units_array">
+        <item>Metric (°C, m/s)</item>
+        <item>Imperial (°F, mph)</item>
+    </string-array>
+
+    <!-- Themes Array for Settings -->
+    <string-array name="themes_array">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System Default</item>
+    </string-array>
+</resources>
